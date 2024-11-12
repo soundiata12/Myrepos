@@ -15,7 +15,7 @@ pipeline{
                  sh "docker tag my-static-app:${params.MYAPP} 646617499701.dkr.ecr.us-east-1.amazonaws.com/myapp-revision:${params.MYAPP}"
                  sh "docker tag my-static-app:${params.MYAPP} 646617499701.dkr.ecr.us-east-1.amazonaws.com/myapp-revision:latest" 
                  sh "docker push 646617499701.dkr.ecr.us-east-1.amazonaws.com/myapp-revision:latest"
-                
+                }
               }
            }
         }
