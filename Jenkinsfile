@@ -5,7 +5,7 @@ pipeline{
         }
     
     stages{
-        stage("Build ECR Repository"){
+        stage("Build & Push in ECR Repository"){
             steps{
                 script{
                     // This step should not normally be used in your script. Consult the inline help for details.
@@ -18,6 +18,11 @@ pipeline{
                 }
               }
            }
+        }
+        stage("update ECS"){
+            steps{
+                sh"aws ecs update-service --cluster myclyser --service myapp --force-new-deployment "
+            }
         }
     }
 }
