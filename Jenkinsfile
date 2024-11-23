@@ -19,16 +19,15 @@ pipeline {
 
         stage("Sonarqube Scan"){
             steps{
-                script{
-
-               withSonarQubeEnv(credentialsId: 'sonarqube_cred') {
+                script {
+                  withSonarQubeEnv(credentialsId: 'sonarqube_cred') {
                  // some block
                     sh "echo I'm playing my roles"
-                   }
-                }
-               
+                 }
             }
+            
         }
+    }
         stage("Scan the file") {
             steps {
                 sh "trivy fs --format table -o mystatic_app.html ."
