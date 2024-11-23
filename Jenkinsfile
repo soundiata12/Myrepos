@@ -30,7 +30,7 @@ pipeline {
                   -Dsonar.projectkey=${SONAR_NAME} \
                   -Dsonar.sources=. \
                   -Dsonar.projectName=${SONAR_NAME} \
-                  -Dsonar.java.binaries.
+                  -Dsonar.java.binaries=. \
                     '''
                  }
             }
