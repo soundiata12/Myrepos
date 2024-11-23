@@ -24,7 +24,7 @@ pipeline {
                 script {
                   withSonarQubeEnv(credentialsId: 'sonarqube_cred') {
                  // some block
-                    ech
+                    
                      sh '''
                  ${SCANER_SNANER}/bin/sonar-scanner \
                   -Dsonar.projectkey=${SONAR_NAME} \
