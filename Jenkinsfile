@@ -13,7 +13,7 @@ pipeline {
         ECS_CLUSTER_NAME = 'mycluster' // My ECS cluster name
         ECS_SERVICE = 'myapp' // My ECS service name
         MY_URL = "https://${ECR_REPO_URL}/"
-        SCANER_SNANER= tool 'mysonarqube'
+        SCANER_SNANER= tool 'my_tool_sonar'
         SONAR_NAME= 'mystaticapp'
     }
 
@@ -22,7 +22,7 @@ pipeline {
         stage("Sonarqube Scan"){
             steps{
                 script {
-                  withSonarQubeEnv('mysonarqube') {
+                  withSonarQubeEnv('my_server_sonar') {
                  // some block
                     
                      sh '''
