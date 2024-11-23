@@ -13,7 +13,7 @@ pipeline {
         ECS_CLUSTER_NAME = 'mycluster' // My ECS cluster name
         ECS_SERVICE = 'myapp' // My ECS service name
         MY_URL = "https://${ECR_REPO_URL}/"
-        SCANER_SNANER= tool 'sonar'
+        SCANER_SNANER= tool 'mysonarqube'
         SONAR_NAME= 'mystaticapp'
     }
 
