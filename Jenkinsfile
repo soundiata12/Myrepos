@@ -22,7 +22,7 @@ pipeline {
                 script {
                   withSonarQubeEnv(credentialsId: 'sonarqube_cred') {
                  // some block
-                    sh "echo I'm playing my roles"
+                    sh "echo Im playing my roles"
                  }
             }
             
